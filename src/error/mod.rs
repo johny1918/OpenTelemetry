@@ -24,6 +24,6 @@ impl IntoResponse for AppError {
             AppError::Forbidden => "Forbidden".to_string(),
             AppError::Unknown(msg) => format!("Unknown error, all I got is this: {}", msg),
         };
-            (StatusCode::INTERNAL_SERVER_ERROR, body).into_response()
+        (StatusCode::INTERNAL_SERVER_ERROR, body).into_response()
     }
 }
